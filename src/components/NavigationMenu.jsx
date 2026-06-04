@@ -20,19 +20,38 @@ function NavigationMenu() {
 
         {/* BLOGS */}
         <li>
-          • BLOGS
+          {/* Wrap the text in a Link to navigate to your portfolio page */}
+          <Link
+            to="/portfolio/grids"
+            className="hover:text-yellow-400 transition-colors"
+          >
+            • BLOGS
+          </Link>
           <div className="ml-8 mt-4 space-y-3 text-lg text-white font-sans font-light">
-            <Link to="/blog/1-column" className="block hover:text-yellow-400">1 Column</Link>
-            <Link to="/blog/2-columns" className="block hover:text-yellow-400">2 Columns</Link>
-            <Link to="/blog/sidebar" className="block hover:text-yellow-400">Sidebar Post</Link>
+            <Link to="/blog/1-column" className="block hover:text-yellow-400">
+              1 Column
+            </Link>
+            <Link to="/blog/2-columns" className="block hover:text-yellow-400">
+              2 Columns
+            </Link>
+            <Link to="/blog/sidebar" className="block hover:text-yellow-400">
+              Sidebar Post
+            </Link>
           </div>
         </li>
 
         <li>
-          <Link to="/about" className="hover:text-yellow-400 transition-colors">• ABOUT</Link>
+          <Link to="/about" className="hover:text-yellow-400 transition-colors">
+            • ABOUT
+          </Link>
         </li>
         <li>
-          <Link to="/contact" className="hover:text-yellow-400 transition-colors">• CONTACT</Link>
+          <Link
+            to="/contact"
+            className="hover:text-yellow-400 transition-colors"
+          >
+            • CONTACT
+          </Link>
         </li>
       </ul>
     </div>

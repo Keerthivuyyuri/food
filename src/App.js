@@ -11,10 +11,23 @@ import BlogSidebarPage from "./pages/BlogSidebarPage";
 import BlogNoSidebar from "./pages/BlogNoSidebar";
 import PortfolioGrids from "./pages/PortfolioGrids";
 import SinglePortfolioNoSidebar from "./pages/SinglePortfolioNoSidebar";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
     <BrowserRouter>
+            <ScrollToTop />
       <Routes>
         <Route path="/" element={<FullscreenNavigation />} />
         <Route path="/home" element={<HomePage />} />
@@ -30,6 +43,7 @@ function App() {
         <Route path="/portfolio/grids" element={<PortfolioGrids />} />
         <Route path="/portfolio/no-sidebar" element={<SinglePortfolioNoSidebar />} />
         <Route path="/portfolio/:id" element={<SinglePortfolioNoSidebar />} />
+        <Route path="/blog/:slug" element={<BlogNoSidebar />} />
       </Routes>
     </BrowserRouter>
   );

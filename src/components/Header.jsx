@@ -7,7 +7,6 @@ function Header() {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "Portfolio - Grids", path: "/portfolio/grids" },
   ];
 
   return (

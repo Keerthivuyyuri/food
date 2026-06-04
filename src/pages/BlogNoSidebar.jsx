@@ -1,9 +1,24 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import menuImage from "../assets/menu.png";
 
 function BlogNoSidebar() {
+
+    const { slug } = useParams();
+
+    const getPostContent = (slug) => {
+    const posts = {
+        "vegan-baked-oatmeal": { title: "Vegan baked oatmeal with fresh berries", author: "Julie Christie" },
+        "summer-harvest-quinoa-salad": { title: "Summer harvest quinoa salad", author: "Mark Doe" },
+        // ... add all your posts here
+    };
+    return posts[slug] || { title: "Post Not Found", author: "Unknown" };
+  };
+
+  const post = getPostContent(slug);
+
   const relatedPosts = [
     {
       title: "Fruit and vegetables and protection against diseases",
@@ -21,35 +36,24 @@ function BlogNoSidebar() {
 
       {/* Hero Section */}
       <section className="relative h-[450px] flex items-center justify-center text-white text-center">
-        {/* Full-width Background Image */}
-        <img
-          src={menuImage}
-          className="absolute inset-0 w-full h-full object-cover"
-          alt="Hero"
-        />
+        <img src={menuImage} className="absolute inset-0 w-full h-full object-cover" alt="Hero" />
         <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* Content Container */}
         <div className="relative z-10 px-4 space-y-4">
-          {/* Category Badge */}
           <span className="inline-block border border-white px-6 py-1 text-xs uppercase tracking-widest mb-4">
             Fashion
           </span>
 
-          {/* Main Title */}
+          {/* 4. Using the dynamic title here */}
           <h1 className="text-5xl md:text-6xl font-serif max-w-3xl mx-auto">
-            Three Ideas for Cooking Goat Meat at Home
+            {post.title}
           </h1>
 
-          {/* Author & Metadata Row */}
           <div className="flex items-center justify-center gap-4 text-sm text-black mt-6">
-            <img
-              src="https://i.pravatar.cc/40" // Placeholder for author avatar
-              className="w-8 h-8 rounded-full"
-              alt="Author"
-            />
-            <span>Julie Christie</span>
-            <span>• October 17, 2021</span>
+            <img src="https://i.pravatar.cc/40" className="w-8 h-8 rounded-full" alt="Author" />
+            {/* 5. Using dynamic author and date */}
+            <span>{post.author}</span>
+            <span>• {post.date}</span>
             <span>• 3:33 pm</span>
             <span>• 2 comments</span>
           </div>

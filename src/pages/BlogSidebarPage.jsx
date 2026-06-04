@@ -1,9 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 function BlogSidebarPage() {
   const tags = ["Food", "Recipes", "Healthy", "Lifestyle", "Vegan", "Kitchen"];
+
+  const recentPosts = [
+    { id: 1, slug: "vegan-baked-oatmeal", img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80", title: "Vegan baked oatmeal with fresh berries" },
+    { id: 2, slug: "summer-harvest-quinoa-salad", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80", title: "Summer harvest quinoa salad" },
+    { id: 3, slug: "warm-roasted-vegetable-bowl", img: "https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=400&q=80", title: "Warm roasted vegetable bowl" },
+    { id: 4, slug: "delicious-brunch-toast-ideas", img: "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=400&q=80", title: "Delicious brunch toast ideas" },
+  ];
 
   const commentsData = [
     {
@@ -232,51 +240,32 @@ function BlogSidebarPage() {
         <aside className="space-y-12">
           {/* ... (Include your Search, Categories, Comments, Archives here) ... */}
 
-          {/* Recent Posted Section */}
+          {/* Recent Posted Section with Link Navigation */}
           <div>
             <h4 className="font-serif text-xl mb-4">Recent Posted</h4>
             <div className="border-t border-black w-full mb-4"></div>
             <div className="space-y-6">
-              {[
-                {
-                  id: 1,
-                  img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80",
-                  title: "Vegan baked oatmeal with fresh berries",
-                },
-                {
-                  id: 2,
-                  img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80",
-                  title: "Summer harvest quinoa salad",
-                },
-
-                {
-                  id: 3,
-                  img: "https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=400&q=80",
-                  title: "Warm roasted vegetable bowl",
-                },
-                {
-                  id: 4,
-                  img: "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=400&q=80",
-                  title: "Delicious brunch toast ideas",
-                },
-              ].map((post) => (
-                <div key={post.id} className="flex gap-4">
+              {recentPosts.map((post) => (
+                <Link
+                  to={`/blog/${post.slug}`} // Navigates to dynamic route
+                  key={post.id}
+                  className="flex gap-4 group"
+                >
                   <img
                     src={post.img}
                     className="w-16 h-16 object-cover"
                     alt="Post"
                   />
                   <div>
-                    <p className="font-bold text-sm">{post.title}</p>
-                    <span className="text-xs text-gray-400">
-                      October 17, 2021
-                    </span>
+                    <p className="font-bold text-sm group-hover:text-gray-600 transition-colors">
+                      {post.title}
+                    </p>
+                    <span className="text-xs text-gray-400">October 17, 2021</span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
-
           {/* Tags Widget */}
           <div>
             <h4 className="font-serif text-xl mb-4">Tags</h4>
