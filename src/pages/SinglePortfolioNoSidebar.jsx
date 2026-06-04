@@ -1,8 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { portfolioItems } from './PortfolioGrids'; 
+import { useParams } from "react-router-dom";
 
-export default function SinglePortfolioNoSidebar() {
+function SinglePortfolioNoSidebar() {
+    const { id } = useParams();
+  const item = portfolioItems.find(i => i.id === parseInt(id));
   return (
     <div className="bg-[#fcfcf9] min-h-screen">
       <Header />
@@ -10,7 +14,7 @@ export default function SinglePortfolioNoSidebar() {
       {/* Hero Section */}
       <section className="relative h-[600px] flex flex-col items-center justify-center text-white text-center">
         <img
-          src="https://images.unsplash.com/photo-1544025162-d76694265ca4"
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80"
           className="absolute inset-0 w-full h-full object-cover"
           alt="Hero"
         />
@@ -131,3 +135,5 @@ export default function SinglePortfolioNoSidebar() {
     </div>
   );
 }
+
+export default SinglePortfolioNoSidebar;

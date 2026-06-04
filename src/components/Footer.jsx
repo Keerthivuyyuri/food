@@ -7,7 +7,7 @@
 //         <div>
 //           <h2 className="text-4xl font-serif mb-6">Food Zero.</h2>
 //         </div>
-        
+
 //         {/* Contact Info */}
 //         <div>
 //           <h4 className="font-bold mb-4">Contact</h4>
@@ -19,7 +19,7 @@
 //             234 Beijing Road, Cyber City CA, 10230
 //           </p>
 //         </div>
-        
+
 //         {/* Newsletter Subscription */}
 //         <div>
 //           <h4 className="font-bold mb-4">Never Miss a Recipe</h4>
@@ -34,7 +34,7 @@
 //           </div>
 //         </div>
 //       </div>
-      
+
 //       {/* Copyright */}
 //       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-[#3c5200] text-sm text-gray-400">
 //         © 2026 Zero Inc. All rights reserved.
@@ -45,6 +45,8 @@
 
 // export default Footer;
 
+import { FaInstagram, FaTwitter, FaFacebookF, FaYoutube } from "react-icons/fa";
+
 function Footer() {
   return (
     <footer className="bg-[#243600] text-white py-20 px-6">
@@ -53,7 +55,7 @@ function Footer() {
         <div>
           <h2 className="text-4xl font-serif">Food Zero.</h2>
         </div>
-        
+
         {/* Contact Info */}
         <div>
           <h4 className="font-bold mb-4">Contact</h4>
@@ -68,7 +70,7 @@ function Footer() {
             Culver City, CA, 90230
           </p>
         </div>
-        
+
         {/* Newsletter Subscription */}
         <div>
           <h4 className="font-bold mb-4">Never Miss a Recipe</h4>
@@ -88,17 +90,23 @@ function Footer() {
           </div>
         </div>
       </div>
-      
+
       {/* Copyright & Socials */}
       <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-dotted border-[#3c5200] flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
         <p>© 2020 Zero Inc. All rights Reserved</p>
-        
+
         {/* Social Icons */}
-        <div className="flex gap-6 mt-4 md:mt-0">
-          <span>IG</span>
-          <span>TW</span>
-          <span>FB</span>
-          <span>YT</span>
+        <div className="flex gap-6 mt-4 md:mt-0 text-white text-xl">
+          <FaInstagram
+            size={24}
+            className="hover:text-gray-400 cursor-pointer"
+          />
+          <FaTwitter size={24} className="hover:text-gray-400 cursor-pointer" />
+          <FaFacebookF
+            size={24}
+            className="hover:text-gray-400 cursor-pointer"
+          />
+          <FaYoutube size={24} className="hover:text-gray-400 cursor-pointer" />
         </div>
       </div>
     </footer>

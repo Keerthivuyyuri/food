@@ -45,7 +45,7 @@ function BlogSidebarPage() {
       <section className="relative h-[450px] flex items-center justify-center text-white text-center">
         {/* Full-width Background Image */}
         <img
-          src="https://images.unsplash.com/photo-1544025162-d76694265ca4"
+          src="https://images.unsplash.com/photo-1516727003284-a96541e51e9c?w=1200"
           className="absolute inset-0 w-full h-full object-cover"
           alt="Hero"
         />
@@ -89,7 +89,7 @@ function BlogSidebarPage() {
           {/* Image Grid */}
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80"
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
               className="col-span-1 h-96 w-full object-cover"
               alt="Main Dish"
             />
@@ -109,7 +109,10 @@ function BlogSidebarPage() {
 
           <p className="text-gray-600 leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem
-            id penatibus imperdiet.
+            id penatibus imperdiet. Turpis egestas ultricies purus auctor
+            tincidunt lacus nunc. Convallis pellentesque quis fringilla
+            sagittis. Egestas in risus sit nunc nunc, arcu donec nam etiam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
 
           {/* Pull Quote */}
@@ -118,6 +121,13 @@ function BlogSidebarPage() {
             lorem id penatibus imperdiet. Turpis egestas ultricies purus auctor
             tincidunt lacus nunc."
           </blockquote>
+          <p className="text-gray-600 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem
+            id penatibus imperdiet. Turpis egestas ultricies purus auctor
+            tincidunt lacus nunc. Convallis pellentesque quis fringilla
+            sagittis. Egestas in risus sit nunc nunc, arcu donec nam etiam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
         </main>
 
         {/* RIGHT: Sidebar (1/3 width) */}
@@ -230,7 +240,7 @@ function BlogSidebarPage() {
               {[
                 {
                   id: 1,
-                  img: "https://images.unsplash.com/photo-1512058564366-c9e6d7ff650b?auto=format&fit=crop&w=400&q=80",
+                  img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80",
                   title: "Vegan baked oatmeal with fresh berries",
                 },
                 {
@@ -238,6 +248,7 @@ function BlogSidebarPage() {
                   img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80",
                   title: "Summer harvest quinoa salad",
                 },
+
                 {
                   id: 3,
                   img: "https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=400&q=80",
@@ -269,8 +280,8 @@ function BlogSidebarPage() {
           {/* Tags Widget */}
           <div>
             <h4 className="font-serif text-xl mb-4">Tags</h4>
-            <div className="border-t border-black w-full mb-4"></div>
-            <div className="flex flex-wrap gap-2">
+            <div className="border-b border-dotted border-gray-400 mt-4"></div>
+            <div className="flex flex-wrap gap-4 mt-4">
               {tags.map((tag) => (
                 <button
                   key={tag}

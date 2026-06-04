@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FullscreenNavigation from "./pages/FullscreenNavigation";
 import HomePage from "./pages/HomePage";
-import MenuPage from "./pages/MenuPage"; // Import your new page
+import ComingSoon from "./pages/ComingSoon";
+import MenuPage from "./pages/MenuPage"; 
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
@@ -17,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<FullscreenNavigation />} />
         <Route path="/home" element={<HomePage />} />
-        {/* New route for the menu */}
+        <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -28,6 +29,7 @@ function App() {
         <Route path="/blog/no-sidebar" element={<BlogNoSidebar />} />
         <Route path="/portfolio/grids" element={<PortfolioGrids />} />
         <Route path="/portfolio/no-sidebar" element={<SinglePortfolioNoSidebar />} />
+        <Route path="/portfolio/:id" element={<SinglePortfolioNoSidebar />} />
       </Routes>
     </BrowserRouter>
   );

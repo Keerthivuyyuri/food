@@ -8,11 +8,6 @@ function Header() {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Portfolio - Grids", path: "/portfolio/grids" },
-    { name: "Single Portfolio - No Sidebar", path: "/portfolio/no-sidebar" },
-    { name: "Blogs - 1 Column", path: "/blog/1-column" },
-    { name: "Blogs - 2 Columns", path: "/blog/2-columns" },
-    { name: "Single Post", path: "/blog/sidebar" },
-    { name: "Single Post - No Sidebar", path: "/blog/no-sidebar" },
   ];
 
   return (
