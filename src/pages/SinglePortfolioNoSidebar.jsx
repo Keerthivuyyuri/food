@@ -1,11 +1,8 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { portfolioItems } from './PortfolioGrids'; 
-import { useParams } from "react-router-dom";
 
 function SinglePortfolioNoSidebar() {
-    const { id } = useParams();
   return (
     <div className="bg-[#fcfcf9] min-h-screen">
       <Header />
