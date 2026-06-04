@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 
 function SinglePortfolioNoSidebar() {
     const { id } = useParams();
-  const item = portfolioItems.find(i => i.id === parseInt(id));
   return (
     <div className="bg-[#fcfcf9] min-h-screen">
       <Header />
@@ -95,14 +94,14 @@ function SinglePortfolioNoSidebar() {
       <section className="bg-[#e9ece3] py-12 px-8 mt-16">
         <div className="max-w-4xl mx-auto flex justify-between items-center text-[#3d405b]">
           {/* Previous Page Link */}
-          <a href="#" className="flex flex-col items-start gap-2">
-            <span className="flex items-center gap-2 text-sm uppercase tracking-widest font-bold">
+          <button type="button" className="flex flex-col items-start gap-2 text-left font-bold hover:underline">
+            <span className="flex items-center gap-2 text-sm uppercase tracking-widest">
               <span className="text-xl">←</span> PREVIOUS PAGE
             </span>
             <span className="font-serif text-xl font-bold">
               Strip Steak With Rosemary Butter
             </span>
-          </a>
+          </button>
 
           {/* Central Grid Icon */}
           <div className="text-2xl cursor-pointer">
@@ -120,14 +119,14 @@ function SinglePortfolioNoSidebar() {
           </div>
 
           {/* Next Page Link */}
-          <a href="#" className="flex flex-col items-end gap-2">
-            <span className="flex items-center gap-2 text-sm uppercase tracking-widest font-bold">
+          <button type="button" className="flex flex-col items-end gap-2 text-right font-bold hover:underline">
+            <span className="flex items-center gap-2 text-sm uppercase tracking-widest">
               NEXT PAGE <span className="text-xl">→</span>
             </span>
             <span className="font-serif text-xl font-bold">
               Option of natural wine available
             </span>
-          </a>
+          </button>
         </div>
       </section>
 

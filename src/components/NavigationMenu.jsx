@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function NavigationMenu() {
   return (
-    <div className="text-white font-serif pl-8 ">
+    <div className="text-white font-serif pl-14 ">
       <ul className="space-y-6 text-4xl md:text-3xl">
         {/* HOME */}
         <li>

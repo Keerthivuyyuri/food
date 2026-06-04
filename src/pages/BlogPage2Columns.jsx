@@ -50,7 +50,7 @@ function BlogPage2Columns() {
                 <h2 className="text-3xl font-serif">{post.title}</h2>
                 <div className="w-20 h-0.5 bg-gray-300"></div>
                 <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#" className="inline-block font-bold hover:underline">Read More →</a>
+                <button type="button" className="inline-block font-bold hover:underline">Read More →</button>
               </div>
             </article>
           ))}

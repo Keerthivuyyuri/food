@@ -19,17 +19,6 @@ function BlogNoSidebar() {
 
   const post = getPostContent(slug);
 
-  const relatedPosts = [
-    {
-      title: "Fruit and vegetables and protection against diseases",
-      img: "https://images.unsplash.com/photo-1610832958506-aa56368176cf",
-    },
-    {
-      title: "Asparagus Spring Salad with Rocket, Goat's Cheese",
-      img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
-    },
-  ];
-
   return (
     <div className="bg-[#fcfcf9] min-h-screen">
       <Header />
@@ -211,9 +200,9 @@ function BlogNoSidebar() {
             </p>
 
             {/* Removed border-b from 'Read More' */}
-            <a href="#" className="inline-block font-bold">
+            <button type="button" className="inline-block font-bold">
               Read More →
-            </a>
+            </button>
           </div>
 
           {/* Related Post 2 */}
@@ -249,9 +238,9 @@ function BlogNoSidebar() {
             </p>
 
             {/* Removed border-b from 'Read More' */}
-            <a href="#" className="inline-block font-bold">
+            <button type="button" className="inline-block font-bold">
               Read More →
-            </a>
+            </button>
           </div>
         </div>
       </section>
