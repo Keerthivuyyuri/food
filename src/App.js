@@ -29,9 +29,9 @@ function App() {
     <BrowserRouter>
             <ScrollToTop />
       <Routes>
-        <Route path="/" element={<FullscreenNavigation />} />
+        <Route path="/" element={<ComingSoon />} />
         <Route path="/home" element={<HomePage />} />
-        <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="/fullscreen-nav" element={<FullscreenNavigation />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />

@@ -37,11 +37,6 @@ function ContactInfo() {
           <FaYoutube size={18} />
         </a>
       </div>
-      <div className="mt-6">
-        <a href="/coming-soon" className="hover:text-gray-400 transition-colors">
-          Coming Soon
-        </a>
-      </div>
     </div>
   );
 }

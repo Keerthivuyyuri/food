@@ -6,7 +6,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { name: "Home", path: "/" },
+    { name: "Home", path: "/fullscreen-nav" },
   ];
 
   return (
